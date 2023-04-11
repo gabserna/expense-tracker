@@ -1,7 +1,18 @@
+//componente que renderizará cada transacción que agregue el usuario
 import React from 'react';
 
+//recibe una transacción como prop y renderiza la información de la transacción, incluyendo su nombre y cantidad
 const Transaction = ({ transaction }) => {
-    const data = "ssup ponk?";
-}
+    const sign = transaction.amount < 0 ? '-' : '+';
+    const amountClass = transaction.amount < 0 ? 'minus' : 'plus';
+    return (
+        //agrega una clase CSS dependiendo de si la transacción es positiva o negativa
+        <li className={amountClass}>
+            <span>
+                {sign}${Math.abs(transaction.amount)}
+            </span>
+        </li>
+    );
+};
 
 export default Transaction;
