@@ -1,6 +1,4 @@
 //componente que renderizará el formulario que permitirá al usuario agregar nuevas transacciones
-import './style.css';
-
 import React, { useContext, useState } from 'react';
 import { GlobalContext } from '../context/GlobalState';
 

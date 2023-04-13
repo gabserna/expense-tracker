@@ -1,7 +1,7 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import ExpenseTracker from './components/ExpenseTracker';
-import TransactionsPage from './components/TransactionsPage';
+import TransactionsPage from './pages/TransactionsPage';
 
 const Routes = () => (
   <Switch>
