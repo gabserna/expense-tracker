@@ -1,6 +1,0 @@
-npm install react-router-dom@6
-
-navigating programatically
-https://www.youtube.com/watch?v=uKRo1Re_B8c&list=PLC3y8-rFHvwjkxt8TOteFdT_YmzwpBlrG&index=6
-
-minute 3:55
