@@ -1,21 +1,20 @@
 import './App.css';
 import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import ExpenseTracker from './components/ExpenseTracker';
-import TransactionsPage from './pages/TransactionsPage';
-import Header from './components/Header';
+import { Routes, Route } from 'react-router-dom';
+//import { BrowserRouter, Route, Switch } from 'react-router-dom';
+//import ExpenseTracker from './components/ExpenseTracker';
+//import TransactionsPage from './pages/TransactionsPage';
+import { Home } from './components/Home';
+import { About } from './components/About';
 
 function App() {
   return (
-    <div className="container">
-      <Header />
-      <BrowserRouter>
-        <Switch>
-          <Route path="/" exact component={ExpenseTracker} />
-          <Route path="/transactions" component={TransactionsPage} />
-        </Switch>
-      </BrowserRouter>
-    </div>
+    
+      <Routes>
+        <Route path="/" element={ <Home />} />
+        <Route path="About" element={ <About />} />
+      </Routes>
+    
   );
 }
 
