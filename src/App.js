@@ -13,6 +13,13 @@ function App() {
       <Routes>
         <Route path="/" element={ <Home />} />
         <Route path="About" element={ <About />} />
+        <Route path="AddTransaction" element={ <AddTransaction />} />
+        <Route path="Balance" element={ <Balance />} />
+        <Route path="ExpenseTracker" element={ <ExpenseTracker />} />
+        <Route path="Header" element={ <Header />} />
+        <Route path="Transaction" element={ <Transaction />} />
+        <Route path="TransactionList" element={ <TransactionList />} />
+        <Route path="About" element={ <About />} />
       </Routes>
     
   );

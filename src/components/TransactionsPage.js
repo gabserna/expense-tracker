@@ -1,6 +1,6 @@
 import React from 'react';
-import TransactionList from '../components/TransactionList';
-import AddTransaction from '../components/AddTransaction';
+import TransactionList from './TransactionList';
+import AddTransaction from './AddTransaction';
 
 function TransactionsPage() {
     return (
