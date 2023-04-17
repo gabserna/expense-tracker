@@ -5,7 +5,7 @@ export const Home = () => {
     return (
         <>
         <div>Home Page</div>
-        <button onClick={() => navigate('page-to-navigate', { replace: true })}>
+        <button onClick={() => navigate('/', { replace: true })}>
             Go to
         </button>
         </>

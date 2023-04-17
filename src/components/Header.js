@@ -6,7 +6,7 @@ export const Header = () => {
     return (
         <header>
             <h1>Expense Tracker</h1>
-            <button onClick={() => navigate('page-to-navigate', { replace: true })}>
+            <button onClick={() => navigate('/', { replace: true })}>
                 Header here
             </button>
         </header>

@@ -1,13 +1,13 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-export const BalanceButton = () => {
+export const BalancePage = () => {
   const navigate = useNavigate();
 
   return (
     <>
       <div>Balance</div>
-      <button onClick={() => navigate('page-to-navigate', { replace: true })}>
+      <button onClick={() => navigate('/Balance', { replace: true })}>
         Ir a página de balance
       </button>
     </>

@@ -7,7 +7,7 @@ export const TransactionComponent = () => {
     return (
         <>
             <div>Transaction</div>
-            <button onClick={() => navigate('/page-to-navigate', { replace: true })}>
+            <button onClick={() => navigate('/Transactions', { replace: true })}>
                 Go to page
             </button>
         </>

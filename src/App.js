@@ -1,8 +1,6 @@
 import './App.css';
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-//import { BrowserRouter, Route, Switch } from 'react-router-dom';
-//import TransactionsPage from './pages/TransactionsPage';
 import { Home } from './components/Home';
 import { About } from './components/About';
 import { AddTransaction } from './components/AddTransaction';
@@ -11,6 +9,7 @@ import { ExpenseTrackerApp } from './components/ExpenseTrackerApp';
 import { Header } from './components/Header';
 import { Transaction } from './components/Transaction';
 import { TransactionList } from './components/TransactionList';
+import { TransactionsPage } from './components/TransactionsPage';
 
 function App() {
   return (
@@ -24,6 +23,7 @@ function App() {
         <Route path="Header" element={ <Header />} />
         <Route path="Transaction" element={ <Transaction />} />
         <Route path="TransactionList" element={ <TransactionList />} />
+        <Route path="TransactionsPage" element={ <TransactionsPage />} />
       </Routes>
     
   );
