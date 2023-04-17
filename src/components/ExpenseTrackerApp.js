@@ -53,7 +53,7 @@ export const ExpenseTrackerApp = () => {
       <Balance income={income} expense={expense} />
       <TransactionList transactions={transactions} deleteTransaction={deleteTransaction} />
       <AddTransaction addTransaction={addTransaction} />
-      <button onClick={() => navigate('/', { replace: true })}>Navigate</button>
+      <button onClick={() => navigate('/', { replace: true })}>Start Tracking</button>
     </div>
   );
 };
