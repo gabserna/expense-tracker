@@ -19,8 +19,11 @@ const Balance = ({ income, expense }) => {
 
   return (
     <div className="balance">
-      <h2>Remaining Balance</h2>
-      <h3>${total.toFixed(2)}</h3>
+      <div className="remaining">
+        <h2>Your Balance</h2>
+        <h1>${total.toFixed(2)}</h1>
+      </div>
+      
       <div className="income-expense">
         <div className="incomes">
           <h4>Incomes</h4>

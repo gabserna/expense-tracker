@@ -15,7 +15,7 @@ body {
 
 h1, h2, h3 {
   margin: 0;
-  padding: 1vh;
+  padding: 0.5vh;
   text-align: center;
 }
 
@@ -25,6 +25,16 @@ h1, h2, h3 {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+}
+
+.income-expense {
+  margin: 0 auto;
+  background-color: #000;
+  width: 90%;
+}
+
+.remaining {
+  text-align: left !important;
 }
 
 .plus {
