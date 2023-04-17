@@ -12,7 +12,7 @@ export const AddTransaction = () => {
     e.preventDefault();
 
     if (text.trim() === '' || amount.trim() === '') {
-      alert('Please enter a text and amount');
+      alert('Please enter a subject text and amount');
       return;
     }
 

@@ -9,8 +9,8 @@ export function TransactionsPage() {
   return (
     <>
       <div>Transactions</div>
-      <button onClick={() => navigate('/TransactionsPage', { replace: true })}>
-        Go to Transactions
+      <button onClick={() => navigate('/Balance', { replace: true })}>
+        Go to Balance
       </button>
     </>
   );

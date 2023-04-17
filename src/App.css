@@ -1,5 +1,11 @@
 .expense-tracker {
+  margin: 0 auto;
+  padding: 2em;
   background-color: darkslategrey;
   color: aliceblue;
+  width: 50%;
+}
+
+h1 {
   text-align: center;
 }

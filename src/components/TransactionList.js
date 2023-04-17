@@ -15,8 +15,8 @@ export const TransactionList = () => {
                     <Transaction key={transaction.id} transaction={transaction}/>
                 ))}
             </ul>
-            <button onClick={() => navigate('/TransactionList', { replace: true })}>
-                Go to page to navigate
+            <button onClick={() => navigate('/', { replace: true })}>
+                Home
             </button>
         </>
     );
