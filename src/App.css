@@ -29,10 +29,12 @@ h1, h2, h3 {
 
 .plus {
   color: #0077b6;
+  font-weight: bolder;
 }
 
 .minus {
   color: #e63946;
+  font-weight: bolder;
 }
 
 button, .btn {
