@@ -1,16 +1,13 @@
 import '../App.css';
 import React, { useState, useEffect } from 'react';
 import TransactionList from './TransactionList';
-import AddTransaction from './AddTransaction';
+import { AddTransaction } from './AddTransaction';
 import Balance from './Balance';
-import { useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button } from 'react-bootstrap';
+import { GlobalProvider } from '../context/GlobalState';
 
 export const ExpenseTrackerApp = () => {
-  const navigate = useNavigate();
   const [transactions, setTransactions] = useState([]);
-
   useEffect(() => {
     try {
       const savedTransactions = JSON.parse(localStorage.getItem('transactions')) ?? [];
@@ -51,16 +48,14 @@ export const ExpenseTrackerApp = () => {
     : { income: 0, expense: 0 };
 
   return (
-    <>
-    <div className="expense-tracker">
-      <h1>Expense Tracker</h1>
-      <Balance income={income} expense={expense} />
-      <TransactionList transactions={transactions} deleteTransaction={deleteTransaction} />
-      <AddTransaction addTransaction={addTransaction} />
-      <Button variant="primary" onClick={() => navigate('/', { replace: true })}>Start Over</Button>
-    </div>
-    </>
+    <GlobalProvider>
+      <div className="expense-tracker">
+        <h1>Expense Tracker</h1>
+        <Balance income={income} expense={expense} />
+        <TransactionList transactions={transactions} deleteTransaction={deleteTransaction} />
+        <AddTransaction addTransaction={addTransaction} />
+      </div>
+    </GlobalProvider>
   );
 };
-
 export default ExpenseTrackerApp;

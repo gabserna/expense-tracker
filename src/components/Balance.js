@@ -1,5 +1,4 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Balance = ({ income, expense }) => {
@@ -25,5 +24,4 @@ const Balance = ({ income, expense }) => {
     </div>
   );
 };
-
 export default Balance;
