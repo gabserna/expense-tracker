@@ -1,11 +1,16 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom'
 
-function Header() {
-  return (
-    <header>
-      <h1>Expense Tracker</h1>
-    </header>
-  );
+export const Header = () => {
+    const navigate = useNavigate()
+    return (
+        <header>
+            <h1>Expense Tracker</h1>
+            <button onClick={() => navigate('page-to-navigate', { replace: true })}>
+                Header here
+            </button>
+        </header>
+    )
 }
 
 export default Header;

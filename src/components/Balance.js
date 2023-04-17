@@ -1,4 +1,18 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
+
+export const BalanceButton = () => {
+  const navigate = useNavigate();
+
+  return (
+    <>
+      <div>Balance</div>
+      <button onClick={() => navigate('page-to-navigate', { replace: true })}>
+        Ir a página de balance
+      </button>
+    </>
+  );
+};
 
 const Balance = ({ income, expense }) => {
   const total = income - expense;

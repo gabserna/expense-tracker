@@ -1,8 +1,22 @@
 //componente que renderizará el formulario que permitirá al usuario agregar nuevas transacciones
 import React, { useContext, useState } from 'react';
 import { GlobalContext } from '../context/GlobalState';
+import { useNavigate } from 'react-router-dom'
+
+
 
 export const AddTransaction = () => {
+
+  const navigate = useNavigate()
+    return (
+        <>
+        <div>Add Transaction</div>
+        <button onClick={() => navigate('page-to-navigate', { replace: true })}>
+            Add transaction
+        </button>
+        </>
+    )
+
   // Obtener el estado y la función addTransaction del contexto global
   const { addTransaction } = useContext(GlobalContext);
 

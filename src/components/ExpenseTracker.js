@@ -2,29 +2,12 @@ import React, { useState, useEffect } from 'react';
 import TransactionList from './TransactionList';
 import AddTransaction from './AddTransaction';
 import Balance from './Balance';
+import { useNavigate } from 'react-router-dom'
 
-const ExpenseTracker = () => {
+export const ExpenseTrackerApp = () => {
+  const navigate = useNavigate();
   const [transactions, setTransactions] = useState([]);
 
-  // Calcula los ingresos y los gastos totales
-  const calculateTotal = (transactions) => {
-    let income = 0;
-    let expense = 0;
-
-    transactions.forEach((transaction) => {
-      if (transaction.amount > 0) {
-        income += transaction.amount;
-      } else {
-        expense += transaction.amount;
-      }
-    });
-
-    return { income, expense };
-  };
-
-  const { income, expense } = calculateTotal(transactions);
-
-  // Almacena las transacciones en el localStorage del usuario
   useEffect(() => {
     const savedTransactions = JSON.parse(
       localStorage.getItem('transactions') || '[]'
@@ -36,24 +19,43 @@ const ExpenseTracker = () => {
     localStorage.setItem('transactions', JSON.stringify(transactions));
   }, [transactions]);
 
-  // Agrega una nueva transacción
   const addTransaction = (newTransaction) => {
+    if (!newTransaction.description || !newTransaction.amount) {
+      return;
+    }
     setTransactions([...transactions, newTransaction]);
   };
 
-  // Elimina una transacción existente
   const deleteTransaction = (id) => {
     setTransactions(transactions.filter((transaction) => transaction.id !== id));
   };
+
+  const { income, expense } = transactions.reduce(
+    (acc, transaction) => {
+      if (transaction.amount > 0) {
+        acc.income += transaction.amount;
+      } else {
+        acc.expense += transaction.amount;
+      }
+      return acc;
+    },
+    { income: 0, expense: 0 }
+  );
 
   return (
     <div className="expense-tracker">
       <h1>Expense Tracker</h1>
       <Balance income={income} expense={expense} />
-      <TransactionList transactions={transactions} deleteTransaction={deleteTransaction} />
+      <TransactionList
+        transactions={transactions}
+        deleteTransaction={deleteTransaction}
+      />
       <AddTransaction addTransaction={addTransaction} />
+      <button onClick={() => navigate('page-to-navigate', { replace: true })}>
+        Navigate
+      </button>
     </div>
   );
 };
 
-export default ExpenseTracker;
+export default ExpenseTrackerApp;
