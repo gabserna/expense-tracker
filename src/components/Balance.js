@@ -1,18 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-
-/* export const BalancePage = () => {
-  const navigate = useNavigate();
-
-  return (
-    <>
-      <div>Balance</div>
-      <button onClick={() => navigate('/Balance', { replace: true })}>
-        Ir a página de balance
-      </button>
-    </>
-  );
-}; */
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Balance = ({ income, expense }) => {
   const total = income - expense;

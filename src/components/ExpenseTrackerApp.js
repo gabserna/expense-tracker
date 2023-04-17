@@ -4,6 +4,8 @@ import TransactionList from './TransactionList';
 import AddTransaction from './AddTransaction';
 import Balance from './Balance';
 import { useNavigate } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Button } from 'react-bootstrap';
 
 export const ExpenseTrackerApp = () => {
   const navigate = useNavigate();
@@ -49,13 +51,15 @@ export const ExpenseTrackerApp = () => {
     : { income: 0, expense: 0 };
 
   return (
+    <>
     <div className="expense-tracker">
       <h1>Expense Tracker</h1>
       <Balance income={income} expense={expense} />
       <TransactionList transactions={transactions} deleteTransaction={deleteTransaction} />
       <AddTransaction addTransaction={addTransaction} />
-      <button onClick={() => navigate('/', { replace: true })}>Start Over?</button>
+      <Button variant="primary" onClick={() => navigate('/', { replace: true })}>Start Over</Button>
     </div>
+    </>
   );
 };
 

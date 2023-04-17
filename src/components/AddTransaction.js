@@ -1,6 +1,9 @@
 import React, { useContext, useState } from 'react';
 import { GlobalContext } from '../context/GlobalState';
 import { useNavigate } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Button } from 'react-bootstrap';
+
 
 export const AddTransaction = () => {
   const navigate = useNavigate();
@@ -52,7 +55,7 @@ export const AddTransaction = () => {
             placeholder="expenses: -, incomes: +"
           />
         </div>
-        <button className="btn">Add transaction</button>
+        <Button className="btn">Add transaction</Button>
       </form>
     </>
   );

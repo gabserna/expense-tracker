@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { GlobalContext } from '../context/GlobalState';
 import Transaction from "./Transaction";
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export const TransactionList = () => {
     const { transactions } = useContext(GlobalContext);

@@ -1,6 +1,8 @@
 // componente que renderizará cada transacción que agregue el usuario
 import '../App.css';
 import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 // recibe una transacción como prop y renderiza la información de la transacción, incluyendo su nombre y cantidad
 export const Transaction = ({ transaction }) => {

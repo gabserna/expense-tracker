@@ -5,4 +5,10 @@
 
 * También debe contar con varias páginas separadas y un sistema de navegación con React Router. Además, debe poder guardar y restaurar las transacciones en el almacenamiento local del usuario y darle estilo con Bootstrap.
 
-# npm install react-router-dom@6
+
+npm install react-router-dom@6
+npm install bootstrap
+npm install react-bootstrap bootstrap
+
+# React Bootstrap
+https://react-bootstrap.github.io/components/
