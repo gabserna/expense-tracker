@@ -1,11 +1,10 @@
 import React, { useContext } from "react";
 import { GlobalContext } from '../context/GlobalState';
 import Transaction from "./Transaction";
-import { useNavigate } from 'react-router-dom';
+
 
 export const TransactionList = () => {
     const { transactions } = useContext(GlobalContext);
-    const navigate = useNavigate();
 
     return (
         <>
@@ -15,11 +14,7 @@ export const TransactionList = () => {
                     <Transaction key={transaction.id} transaction={transaction}/>
                 ))}
             </ul>
-            <button onClick={() => navigate('/', { replace: true })}>
-                Home
-            </button>
         </>
     );
 };
-
 export default TransactionList;

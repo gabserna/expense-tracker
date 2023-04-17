@@ -1,20 +1,6 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
 import TransactionList from './TransactionList';
 import AddTransaction from './AddTransaction';
-
-export function TransactionsPage() {
-  const navigate = useNavigate();
-
-  return (
-    <>
-      <div>Transactions</div>
-      <button onClick={() => navigate('/Balance', { replace: true })}>
-        Go to Balance
-      </button>
-    </>
-  );
-}
 
 export function Transactions() {
   return (

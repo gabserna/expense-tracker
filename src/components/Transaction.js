@@ -1,19 +1,6 @@
 // componente que renderizará cada transacción que agregue el usuario
 import '../App.css';
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
-
-export const TransactionComponent = () => {
-    const navigate = useNavigate();
-    return (
-        <>
-            <div>Transaction</div>
-            <button onClick={() => navigate('/Transactions', { replace: true })}>
-                Where to go?
-            </button>
-        </>
-    );
-};
 
 // recibe una transacción como prop y renderiza la información de la transacción, incluyendo su nombre y cantidad
 export const Transaction = ({ transaction }) => {

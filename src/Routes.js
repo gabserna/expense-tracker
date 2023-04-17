@@ -1,12 +1,11 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import ExpenseTracker from './components/ExpenseTracker';
-import TransactionsPage from './pages/TransactionsPage';
+import ExpenseTrackerApp from './components/ExpenseTrackerApp';
+
 
 const Routes = () => (
   <Switch>
-    <Route exact path="/" component={ExpenseTracker} />
-    <Route path="/transactions" component={TransactionsPage} />
+    <Route exact path="/ExpenseTrackerApp" component={ExpenseTrackerApp} />
   </Switch>
 );
 
