@@ -1,3 +1,4 @@
+import '../App.css';
 import React, { useState, useEffect } from 'react';
 import TransactionList from './TransactionList';
 import AddTransaction from './AddTransaction';
@@ -53,7 +54,7 @@ export const ExpenseTrackerApp = () => {
       <Balance income={income} expense={expense} />
       <TransactionList transactions={transactions} deleteTransaction={deleteTransaction} />
       <AddTransaction addTransaction={addTransaction} />
-      <button onClick={() => navigate('/', { replace: true })}>Start Tracking</button>
+      <button onClick={() => navigate('/', { replace: true })}>Track</button>
     </div>
   );
 };

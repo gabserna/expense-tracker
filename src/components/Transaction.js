@@ -1,4 +1,5 @@
 // componente que renderizará cada transacción que agregue el usuario
+import './App.css';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 

@@ -1,3 +1,5 @@
-.App {
+.expense-tracker {
+  background-color: darkslategrey;
+  color: aliceblue;
   text-align: center;
 }

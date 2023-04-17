@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-export const BalancePage = () => {
+/* export const BalancePage = () => {
   const navigate = useNavigate();
 
   return (
@@ -12,7 +12,7 @@ export const BalancePage = () => {
       </button>
     </>
   );
-};
+}; */
 
 const Balance = ({ income, expense }) => {
   const total = income - expense;
