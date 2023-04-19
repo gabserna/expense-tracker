@@ -1,4 +1,4 @@
-import "../App.css";
+import "../Style.css";
 import React, { useState, useEffect } from "react";
 import TransactionList from "./TransactionList";
 import { AddTransaction } from "./AddTransaction";
