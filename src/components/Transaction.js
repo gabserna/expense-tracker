@@ -6,10 +6,8 @@ export const Transaction = ({ transaction }) => {
   const amountClass = transaction.amount < 0 ? "minus" : "plus";
   return (
     // agrega una clase dependiendo si la transacción es positiva o negativa
-    <li className={amountClass}>
-      <span>
-        {sign}${Math.abs(transaction.amount)}
-      </span>
+    <li className={transaction.amount < 0 ? "minus" : "plus"}>
+      {transaction.text} <span>{sign}${Math.abs(transaction.amount)}</span>
     </li>
   );
 };
