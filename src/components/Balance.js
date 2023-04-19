@@ -1,12 +1,18 @@
-import React, { useContext } from 'react';
-import { GlobalContext } from '../context/GlobalState';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import React, { useContext } from "react";
+import { GlobalContext } from "../context/GlobalState";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const Balance = () => {
   const { transactions } = useContext(GlobalContext);
   const amounts = transactions.map((transaction) => transaction.amount);
-  const income = amounts.filter((amount) => amount > 0).reduce((acc, amount) => acc + amount, 0);
-  const expense = Math.abs(amounts.filter((amount) => amount < 0).reduce((acc, amount) => acc + amount, 0));
+  const income = amounts
+    .filter((amount) => amount > 0)
+    .reduce((acc, amount) => acc + amount, 0);
+  const expense = Math.abs(
+    amounts
+      .filter((amount) => amount < 0)
+      .reduce((acc, amount) => acc + amount, 0)
+  );
   const total = income - expense;
 
   return (
@@ -15,7 +21,7 @@ const Balance = () => {
         <h2>Your Balance</h2>
         <h1>${total.toFixed(2)}</h1>
       </div>
-      
+
       <div className="income-expense">
         <div className="incomes">
           <h4>Incomes</h4>
@@ -29,5 +35,4 @@ const Balance = () => {
     </div>
   );
 };
-
 export default Balance;
