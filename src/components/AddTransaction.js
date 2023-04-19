@@ -1,6 +1,8 @@
 import React, { useContext, useState } from "react";
 import { GlobalContext } from "../context/GlobalState";
 import { Button } from "react-bootstrap";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '../Style.css';
 
 export const AddTransaction = () => {
   const { dispatch } = useContext(GlobalContext);
@@ -53,7 +55,7 @@ export const AddTransaction = () => {
             placeholder='Add "-" to expenses'
           />
         </div>
-        <Button variant="primary" type="submit">
+        <Button className="long-btn" variant="primary" type="submit">
           Add transaction
         </Button>
       </form>
