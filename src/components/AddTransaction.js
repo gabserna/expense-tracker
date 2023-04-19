@@ -3,9 +3,16 @@ import { GlobalContext } from '../context/GlobalState';
 import { Button } from 'react-bootstrap';
 
 export const AddTransaction = () => {
-  const { addTransaction } = useContext(GlobalContext);
+  const { dispatch } = useContext(GlobalContext);
   const [text, setText] = useState('');
   const [amount, setAmount] = useState('');
+
+  const addTransaction = (transaction) => {
+    dispatch({
+      type: 'ADD_TRANSACTION',
+      payload: transaction
+    });
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -32,11 +39,12 @@ export const AddTransaction = () => {
       <form onSubmit={handleSubmit}>
         <div className="form-control">
           <label htmlFor="text">Description</label>
-          <input type="text" value={text} onChange={(e) => setText(e.target.value)} placeholder="Enter description..." />
+          <input type="text" value={text} onChange={(e) => setText(e.target.value)} placeholder="What was it used for?" />
         </div>
         <div className="form-control">
-          <label htmlFor="amount">Amount <br /> (negative - expense, positive - income)</label>
-          <input type="number" value={amount} onChange={(e) => setAmount(e.target.value)} placeholder="Enter amount..." />
+          <label htmlFor="amount">Amount</label>
+          <input type="number" value={amount} onChange={(e) => setAmount(e.target.value)} placeholder='Add "-" to expenses' />
+
         </div>
         <Button variant="primary" type="submit">Add transaction</Button>
       </form>

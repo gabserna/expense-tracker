@@ -29,12 +29,15 @@ export const GlobalProvider = ({ children }) => {
   }
 
   return (
-    <GlobalContext.Provider value={{
-      transactions: state.transactions,
-      deleteTransaction,
-      addTransaction
-    }}>
+    <GlobalContext.Provider
+      value={{
+        transactions: state.transactions,
+        deleteTransaction,
+        addTransaction,
+        dispatch // Incluimos dispatch en el valor del contexto
+      }}
+    >
       {children}
     </GlobalContext.Provider>
   );
-}
+};

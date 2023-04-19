@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { GlobalContext } from '../context/GlobalState';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-const Balance = ({ income, expense }) => {
+const Balance = () => {
+  const { transactions } = useContext(GlobalContext);
+  const amounts = transactions.map((transaction) => transaction.amount);
+  const income = amounts.filter((amount) => amount > 0).reduce((acc, amount) => acc + amount, 0);
+  const expense = Math.abs(amounts.filter((amount) => amount < 0).reduce((acc, amount) => acc + amount, 0));
   const total = income - expense;
 
   return (
@@ -18,10 +23,11 @@ const Balance = ({ income, expense }) => {
         </div>
         <div className="expenses">
           <h4>Expenses</h4>
-          <p className="money minus">${Math.abs(expense).toFixed(2)}</p>
+          <p className="money minus">${expense.toFixed(2)}</p>
         </div>
       </div>
     </div>
   );
 };
+
 export default Balance;

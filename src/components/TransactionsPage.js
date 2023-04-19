@@ -1,4 +1,4 @@
-import React from 'react';
+/* import React from 'react';
 import TransactionList from './TransactionList';
 import AddTransaction from './AddTransaction';
 
@@ -10,4 +10,4 @@ export function Transactions() {
       <AddTransaction />
     </div>
   );
-}
+} */

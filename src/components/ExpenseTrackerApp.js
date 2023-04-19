@@ -33,8 +33,7 @@ export const ExpenseTrackerApp = () => {
     setTransactions(transactions.filter((transaction) => transaction.id !== id));
   };
 
-  const { income, expense } = transactions.length > 0
-    ? transactions.reduce(
+  const { income, expense } = transactions.length > 0 ? transactions.reduce(
         (acc, transaction) => {
           if (transaction.amount > 0) {
             acc.income += transaction.amount;
