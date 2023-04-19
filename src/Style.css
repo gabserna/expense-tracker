@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;700&display=swap');
 
 body {
-  margin: 1em;
+  margin: 1em !important;
   background-color: #1b263b !important;
   font-family: 'Karla', sans-serif;
 }
@@ -13,10 +13,10 @@ body {
   width: 30%;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
   margin: 0;
   padding: 0.5vh;
-  text-align: center;
+  /* text-align: center; */
 }
 
 .form-control {

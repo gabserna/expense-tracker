@@ -37,7 +37,7 @@ export const AddTransaction = () => {
   return (
     <>
       <h3>Add new transaction</h3>
-      <form onSubmit={handleSubmit}>
+      <form className="d-grid gap-2" onSubmit={handleSubmit}>
         <div className="form-control">
           <label htmlFor="text">Description:&nbsp;</label><br />
           <input
@@ -55,7 +55,7 @@ export const AddTransaction = () => {
             placeholder='Add "-" to expenses'
           />
         </div>
-        <Button className="long-btn" variant="primary" type="submit">
+        <Button size="sm" variant="primary" type="submit">
           Add transaction
         </Button>
       </form>

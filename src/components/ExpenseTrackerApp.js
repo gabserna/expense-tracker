@@ -54,7 +54,7 @@ export const ExpenseTrackerApp = () => {
   return (
     <GlobalProvider>
       <div className="expense-tracker">
-        <h1>Expense Tracker</h1>
+        <h4>Expense Tracker App</h4>
         <Balance income={income} expense={expense} />
         <TransactionList
           transactions={transactions}
