@@ -37,16 +37,15 @@ export const AddTransaction = () => {
       <h3>Add new transaction</h3>
       <form onSubmit={handleSubmit}>
         <div className="form-control">
-          <label htmlFor="text">Description:&nbsp;</label>
+          <label htmlFor="text">Description:&nbsp;</label><br />
           <input
             type="text"
             value={text}
             onChange={(e) => setText(e.target.value)}
             placeholder="What was it used for?"
           />
-        </div>
-        <div className="form-control">
-          <label htmlFor="amount">Amount:&nbsp;</label>
+          <br />
+          <label htmlFor="amount">Amount:&nbsp;</label><br />
           <input
             type="number"
             value={amount}
