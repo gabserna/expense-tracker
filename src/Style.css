@@ -13,10 +13,12 @@ body {
   width: 30%;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3 {
   margin: 0;
-  padding: 0.5vh;
-  /* text-align: center; */
+  padding-left: 0.5em;
+}
+h4 {
+  text-align: center;
 }
 
 .form-control {
@@ -39,6 +41,7 @@ h1, h2, h3, h4 {
 
 .remaining {
   text-align: left !important;
+  color: #1b263b;
 }
 
 .plus {
