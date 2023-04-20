@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { GlobalContext } from "../context/GlobalState";
-import Transaction from "./Transaction";
+import { Transaction } from "./Transaction";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 // component to show a list of transactions (history)

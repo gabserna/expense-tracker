@@ -34,9 +34,8 @@ https://react-bootstrap.github.io/components/
 
 
 **me falta**
-- should delete transactions??
+- should delete transactions
 - github pages?
-- storage?
 - boostrap style
 
 
@@ -54,3 +53,5 @@ I decided to work with the **Expense Tracker App**, because it seemed more visua
 - A: Maybe my code can be simplified, use less components or make it more attractive, I think that with practice I will be able to learn more
 
 - I also used Prettier extension to make it more readable, and added comments to remember the steps I followed.
+
+Saia helped me to finish the delete button and all done!!
