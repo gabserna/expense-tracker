@@ -12,8 +12,8 @@ export const ExpenseTrackerApp = () => {
   useEffect(() => {
     try {
       const savedTransactions =
-      //getting transactions from json
-        JSON.parse(localStorage.getItem("transactions")) ?? []; 
+        //getting transactions from json
+        JSON.parse(localStorage.getItem("transactions")) ?? [];
       //setting saved transactions to the state
       setTransactions(savedTransactions);
     } catch (error) {

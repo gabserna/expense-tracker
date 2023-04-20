@@ -38,3 +38,19 @@ https://react-bootstrap.github.io/components/
 - github pages?
 - storage?
 - boostrap style
+
+
+
+Presentation
+I decided to work with the **Expense Tracker App**, because it seemed more visually abstract and I thought was more possible for me to achieve.
+
+# Q: What challenges did I face?
+- A: I think the biggest challenge was being able to understand the concepts of hooks and props, I had to read documentation and watch many video tutorials that some did not work and many others real good ones had an Indian accent.
+
+# Q: What was the most difficult part of the project?
+- A: linking the different components so that they can work together, without errors, it was very frustrating that having a single error does not let the app work (or shows something), also using context and reduce is not 100% clear yet in my mind, but enough to not having so many errors.
+
+# Q: What could I have done better?
+- A: Maybe my code can be simplified, use less components or make it more attractive, I think that with practice I will be able to learn more
+
+- I also used Prettier extension to make it more readable, and added comments to remember the steps I followed.
