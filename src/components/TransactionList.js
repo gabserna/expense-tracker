@@ -3,6 +3,7 @@ import { GlobalContext } from "../context/GlobalState";
 import Transaction from "./Transaction";
 import "bootstrap/dist/css/bootstrap.min.css";
 
+// component to show a list of transactions (history)
 export const TransactionList = () => {
   const { transactions } = useContext(GlobalContext);
   return (

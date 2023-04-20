@@ -1,11 +1,11 @@
 import React from "react";
 
-//recibe una transacción como prop y renderiza la información de la transacción, incluyendo su nombre y cantidad
+//component receiving a transaction as a prop and renders it
 export const Transaction = ({ transaction }) => {
   const sign = transaction.amount < 0 ? "-" : "+";
   const amountClass = transaction.amount < 0 ? "minus" : "plus";
   return (
-    // agrega una clase dependiendo si la transacción es positiva o negativa
+    //this adds a class depending if is + or -
     <li className={transaction.amount < 0 ? "minus" : "plus"}>
       {transaction.text} <span>{sign}${Math.abs(transaction.amount)}</span>
     </li>

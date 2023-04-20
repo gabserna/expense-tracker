@@ -1,5 +1,7 @@
+// this reducer function manages GlobalState app
 const AppReducer = (state, action) => {
   switch (action.type) {
+    // case for deleting a transaction
     case "DELETE_TRANSACTION":
       return {
         ...state,
@@ -7,6 +9,7 @@ const AppReducer = (state, action) => {
           (transaction) => transaction.id !== action.payload
         ),
       };
+    // case for adding a new transaction
     case "ADD_TRANSACTION":
       return {
         ...state,

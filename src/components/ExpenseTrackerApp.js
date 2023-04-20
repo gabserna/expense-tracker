@@ -7,11 +7,14 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { GlobalProvider } from "../context/GlobalState";
 
 export const ExpenseTrackerApp = () => {
+  //state for transactions
   const [transactions, setTransactions] = useState([]);
   useEffect(() => {
     try {
       const savedTransactions =
-        JSON.parse(localStorage.getItem("transactions")) ?? [];
+      //getting transactions from json
+        JSON.parse(localStorage.getItem("transactions")) ?? []; 
+      //setting saved transactions to the state
       setTransactions(savedTransactions);
     } catch (error) {
       console.error(error);
@@ -19,6 +22,7 @@ export const ExpenseTrackerApp = () => {
   }, []);
 
   useEffect(() => {
+    //saving transactions to local storage
     localStorage.setItem("transactions", JSON.stringify(transactions));
   }, [transactions]);
 
@@ -26,12 +30,15 @@ export const ExpenseTrackerApp = () => {
     if (!newTransaction.description || !newTransaction.amount) {
       return;
     }
+    //this adds a unique ID to every new transaction
     const transactionWithId = { ...newTransaction, id: Date.now() };
+    //this adds new transaction to the state
     setTransactions([...transactions, transactionWithId]);
   };
 
   const deleteTransaction = (id) => {
     setTransactions(
+      //this removes a transaction by id from state
       transactions.filter((transaction) => transaction.id !== id)
     );
   };
@@ -41,8 +48,10 @@ export const ExpenseTrackerApp = () => {
       ? transactions.reduce(
           (acc, transaction) => {
             if (transaction.amount > 0) {
+              //calcula el total de income
               acc.income += transaction.amount;
             } else {
+              //calcula el total de expenses
               acc.expense += transaction.amount;
             }
             return acc;

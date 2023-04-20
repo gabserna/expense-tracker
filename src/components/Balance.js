@@ -2,19 +2,29 @@ import React, { useContext } from "react";
 import { GlobalContext } from "../context/GlobalState";
 import "bootstrap/dist/css/bootstrap.min.css";
 
+//this component shows the user's current balance
 const Balance = () => {
   const { transactions } = useContext(GlobalContext);
+
+  //array for transaction amounts
   const amounts = transactions.map((transaction) => transaction.amount);
+
+  //total income
   const income = amounts
     .filter((amount) => amount > 0)
     .reduce((acc, amount) => acc + amount, 0);
+
+  //total expense
   const expense = Math.abs(
     amounts
       .filter((amount) => amount < 0)
       .reduce((acc, amount) => acc + amount, 0)
   );
+
+  //total balance
   const total = income - expense;
 
+  //render balance with income, expense and remaining balance
   return (
     <div className="balance">
       <div className="remaining">
