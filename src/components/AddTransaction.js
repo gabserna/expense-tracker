@@ -81,10 +81,10 @@ export const AddTransaction = () => {
           className={`error-toast bg-${variant}`}
         >
           <Toast.Header>
-            <strong className="me-auto">Can't be empty</strong>
+            <strong className="me-auto">Oh really? Dont try to cheat me</strong>
           </Toast.Header>
           <Toast.Body className="text-white">
-            Please enter a description and amount.
+            It cant be empty! so, don't be lazy and tell me what and how much you spent on.
           </Toast.Body>
         </Toast>
       </div>
