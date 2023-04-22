@@ -24,11 +24,14 @@ const Balance = () => {
   //total balance
   const total = income - expense;
 
+  //color class for balance depending if its negative or positive
+  const balanceClass = total < 0 ? "text-danger" : "text-primary";
+
   //render balance with income, expense and remaining balance
   return (
     <div className="balance">
       <div className="remaining">
-        <h3>Your Balance: ${total.toFixed(2)}</h3>
+        <h3>Your Balance: <span className={balanceClass}> ${total.toFixed(2)}</span></h3>
       </div>
 
       <div className="income-expense">

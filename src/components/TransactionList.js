@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { GlobalContext } from "../context/GlobalState";
 import { Transaction } from "./Transaction";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Card from "react-bootstrap/Card";
 
 // component to show a list of transactions (history)
 export const TransactionList = () => {
@@ -9,11 +10,13 @@ export const TransactionList = () => {
   return (
     <>
       <h4>History</h4>
-      <ul className="list">
-        {transactions.map((transaction) => (
-          <Transaction key={transaction.id} transaction={transaction} />
-        ))}
-      </ul>
+      <Card body>
+        <div>
+          {transactions.map((transaction) => (
+            <Transaction key={transaction.id} transaction={transaction} />
+          ))}
+        </div>
+      </Card>
     </>
   );
 };

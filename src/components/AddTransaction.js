@@ -51,21 +51,25 @@ export const AddTransaction = () => {
             type="text"
             value={text}
             onChange={(e) => setText(e.target.value)}
-            placeholder="What was it used for?"
+            placeholder="And now what did you buy?"
           />
         </InputGroup>
         <InputGroup className="mb-3">
-          <InputGroup.Text>Amount:</InputGroup.Text>
+          <InputGroup.Text>
+            Amount:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </InputGroup.Text>
           <Form.Control
             type="number"
             value={amount}
             onChange={(e) => setAmount(e.target.value)}
-            placeholder='Add "-" to expenses'
+            placeholder='Add "-" for expenses'
           />
         </InputGroup>
-        <Button className="mt-3" size="sm" variant="primary" type="submit">
-          Add transaction
-        </Button>
+        <div className="d-grid gap-2">
+          <Button size="lg" variant="primary" type="submit">
+            Add transaction
+          </Button>
+        </div>
       </Form>
     </>
   );
