@@ -24,19 +24,29 @@ Build an expense tracker! This app allows the user to increase and decrease thei
 
 * También debe contar con varias páginas separadas y un sistema de navegación con React Router. Además, **debe poder guardar y restaurar las transacciones en el almacenamiento local del usuario** y darle estilo con Bootstrap.
 
+# React Bootstrap
+https://react-bootstrap.github.io/components/
 
 npm install react-router-dom@6
 npm install bootstrap
 npm install react-bootstrap bootstrap
 
-# React Bootstrap
-https://react-bootstrap.github.io/components/
+# to deploy in github pages:
+1- npm install gh-pages --save-dev
+2- npm run build
+3- npm run deploy
+4- don't gorget to push all commits
+after all changes repeat steps: 2, 3 & 4.
 
-
-**me falta**
-- should delete transactions
-- github pages?
-- boostrap style
+make sure to add to package.json:
+{
+  "name": "expense-tracker",
+  "homepage": "https://gabserna.github.io/expense-tracker",
+  },
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
 
 
 
@@ -54,4 +64,4 @@ I decided to work with the **Expense Tracker App**, because it seemed more visua
 
 - I also used Prettier extension to make it more readable, and added comments to remember the steps I followed.
 
-Saia helped me to finish the delete button and all done!!
+Saia helped me to overlook my code and guide me to finish the delete button and all I need to add was the missing style using react-boostrap and ***all done***!!
