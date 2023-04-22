@@ -8,7 +8,7 @@ import reportWebVitals from "./reportWebVitals";
 createRoot(document.getElementById("root")).render(
   // strict mode catch potential problems
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/expense-tracker">
       <App />
     </BrowserRouter>
   </React.StrictMode>
