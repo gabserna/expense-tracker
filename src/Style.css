@@ -6,11 +6,11 @@ body {
   font-family: 'Karla', sans-serif;
 }
 .expense-tracker {
-  margin: 0 auto;
-  padding: 1vh;
+  margin: 2em auto;
+  padding: 1em;
   background-color: #415a77;
   color: aliceblue;
-  width: 30%;
+  width: 40%;
   border-radius: 3%;
 }
 
@@ -56,4 +56,16 @@ input {
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
+}
+
+
+@media screen and (max-width: 600px) {
+  .expense-tracker {
+    margin: 2em auto;
+    padding: 1em;
+    background-color: #415a77;
+    color: aliceblue;
+    width: 90%;
+    border-radius: 3%;
+  }
 }
