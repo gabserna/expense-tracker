@@ -15,10 +15,7 @@ export const Transaction = ({ transaction }) => {
       style={{ fontWeight: "bold" }}
     >
       &#9656;&nbsp;{transaction.text} {sign}${amount}&nbsp;&nbsp;&nbsp;
-      <Badge
-        bg="danger"
-        style={{ border: "0.1px solid transparent" }}
-      >
+      <Badge bg="danger" style={{ border: "0.1px solid transparent" }}>
         <CloseButton
           aria-label="Hide"
           style={{ fontSize: "0.6rem" }}

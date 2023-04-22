@@ -31,7 +31,10 @@ const Balance = () => {
   return (
     <div className="balance">
       <div className="remaining">
-        <h3>Your Balance: <span className={balanceClass}> ${total.toFixed(2)}</span></h3>
+        <h3>
+          Your Balance:{" "}
+          <span className={balanceClass}> ${total.toFixed(2)}</span>
+        </h3>
       </div>
 
       <div className="income-expense">

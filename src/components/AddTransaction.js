@@ -84,7 +84,8 @@ export const AddTransaction = () => {
             <strong className="me-auto">Oh really? Dont try to cheat me</strong>
           </Toast.Header>
           <Toast.Body className="text-white">
-            It cant be empty! so, don't be lazy and tell me what and how much you spent on.
+            It cant be empty! so, don't be lazy and tell me what and how much
+            you spent on.
           </Toast.Body>
         </Toast>
       </div>
