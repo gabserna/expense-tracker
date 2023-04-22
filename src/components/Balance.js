@@ -37,11 +37,11 @@ const Balance = () => {
       <div className="income-expense">
         <div className="incomes">
           <h4>Incomes</h4>
-          <p className="money plus">${income.toFixed(2)}</p>
+          <p className="text-primary">${income.toFixed(2)}</p>
         </div>
         <div className="expenses">
           <h4>Expenses</h4>
-          <p className="money minus">${expense.toFixed(2)}</p>
+          <p className="text-danger">${expense.toFixed(2)}</p>
         </div>
       </div>
     </div>

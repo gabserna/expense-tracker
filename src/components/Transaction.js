@@ -11,14 +11,18 @@ export const Transaction = ({ transaction }) => {
 
   return (
     <ListGroup.Item
-      className={transaction.amount < 0 ? "minus" : "plus"}
-      style={{ color: "#415a77" }}
+      className={transaction.amount < 0 ? "text-danger" : "text-primary"}
+      style={{ fontWeight: "bold" }}
     >
       &#9656;&nbsp;{transaction.text} {sign}${amount}&nbsp;&nbsp;&nbsp;
-      <Badge className="delete" bg="info">
+      <Badge
+        bg="danger"
+        style={{ border: "0.1px solid transparent" }}
+      >
         <CloseButton
           aria-label="Hide"
-          style={{ fontSize: "0.5rem" }}
+          style={{ fontSize: "0.6rem" }}
+          variant="dark"
           onClick={() => deleteTransaction(transaction.id)}
         />
       </Badge>

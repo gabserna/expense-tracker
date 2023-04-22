@@ -1,18 +1,21 @@
 import React, { useContext, useState } from "react";
 import { GlobalContext } from "../context/GlobalState";
-import { Button } from "react-bootstrap";
+import { Button, Toast } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../Style.css";
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
 
-// component for adding a new transaction
 export const AddTransaction = () => {
+  //dispatch desde contexto
   const { dispatch } = useContext(GlobalContext);
+  //define estados descripción y transacción, y estado del mensaje de error
   const [text, setText] = useState("");
   const [amount, setAmount] = useState("");
+  const [showError, setShowError] = useState(false);
+  const variant = "danger";
 
-  // this adds new transaction to the list
+  //agregar nueva transacción al estado global (van en mayusculas)
   const addTransaction = (transaction) => {
     dispatch({
       type: "ADD_TRANSACTION",
@@ -20,27 +23,27 @@ export const AddTransaction = () => {
     });
   };
 
-  // handle form submission
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  //envío del formulario
+  const handleSubmit = (x) => {
+    x.preventDefault();
 
+    //verificamos valores vacíos
     if (text.trim() === "" || amount.trim() === "") {
-      alert("Please enter a description and amount.");
+      setShowError(true);
       return;
     }
 
+    //crea nueva transaccion y agrega al estado global, random id
     const newTransaction = {
-      id: Math.floor(Math.random() * 100000000),
+      id: Math.floor(Math.random() * 1000),
       text,
       amount: +amount,
     };
-
     addTransaction(newTransaction);
     setText("");
     setAmount("");
   };
 
-  // Render the form for adding a new transaction
   return (
     <>
       <h4>Add new transaction</h4>
@@ -71,6 +74,20 @@ export const AddTransaction = () => {
           </Button>
         </div>
       </Form>
+      <div className="d-grid gap-2">
+        <Toast
+          show={showError}
+          onClose={() => setShowError(false)}
+          className={`error-toast bg-${variant}`}
+        >
+          <Toast.Header>
+            <strong className="me-auto">Can't be empty</strong>
+          </Toast.Header>
+          <Toast.Body className="text-white">
+            Please enter a description and amount.
+          </Toast.Body>
+        </Toast>
+      </div>
     </>
   );
 };
