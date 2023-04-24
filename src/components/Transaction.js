@@ -10,19 +10,21 @@ export const Transaction = ({ transaction }) => {
   const amount = Math.abs(transaction.amount);
 
   return (
-    <ListGroup.Item
-      className={transaction.amount < 0 ? "text-danger" : "text-primary"}
-      style={{ fontWeight: "bold" }}
-    >
-      &#9656;&nbsp;{transaction.text} {sign}${amount}&nbsp;&nbsp;&nbsp;
-      <Badge bg="danger" style={{ border: "0.1px solid transparent" }}>
-        <CloseButton
-          aria-label="Hide"
-          style={{ fontSize: "0.6rem" }}
-          variant="dark"
-          onClick={() => deleteTransaction(transaction.id)}
-        />
-      </Badge>
-    </ListGroup.Item>
+    <ListGroup>
+      <ListGroup.Item
+        className={transaction.amount < 0 ? "text-danger" : "text-primary"}
+        style={{ fontWeight: "bold" }}
+      >
+        <Badge bg="danger" style={{ border: "0.1px solid transparent" }}>
+          <CloseButton
+            aria-label="Hide"
+            style={{ fontSize: "0.6rem" }}
+            variant="dark"
+            onClick={() => deleteTransaction(transaction.id)}
+          />
+        </Badge>
+        &#9656;&nbsp;{transaction.text} &nbsp;&nbsp;&nbsp; {sign}${amount}
+      </ListGroup.Item>
+    </ListGroup>
   );
 };

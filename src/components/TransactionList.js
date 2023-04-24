@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { GlobalContext } from "../context/GlobalState";
 import { Transaction } from "./Transaction";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Card from "react-bootstrap/Card";
+import ListGroup from "react-bootstrap/ListGroup";
 
 // component to show a list of transactions (history)
 export const TransactionList = () => {
@@ -10,13 +10,11 @@ export const TransactionList = () => {
   return (
     <>
       <h4>History</h4>
-      <Card body>
-        <div>
-          {transactions.map((transaction) => (
-            <Transaction key={transaction.id} transaction={transaction} />
-          ))}
-        </div>
-      </Card>
+      <ListGroup>
+        {transactions.map((transaction) => (
+          <Transaction key={transaction.id} transaction={transaction} />
+        ))}
+      </ListGroup>
     </>
   );
 };
