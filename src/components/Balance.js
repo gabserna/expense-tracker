@@ -25,26 +25,44 @@ const Balance = () => {
   const total = income - expense;
 
   //color class for balance depending if its negative or positive
-  const balanceClass = total < 0 ? "text-danger" : "text-primary";
+  const balanceClass = total < 0 ? "#f21b3f" : "#00ff41";
 
   //render balance with income, expense and remaining balance
   return (
     <div className="balance">
-      <div className="remaining">
+      <div style={{ color: "#fff", fontWeight: "bold", textAlign: "center" }}>
         <h3>
-          Your Balance:{" "}
-          <span className={balanceClass}> ${total.toFixed(2)}</span>
+          Current Balance:{" "}
+          <span style={{ color: balanceClass, fontWeight: "bold" }}>
+            {" "}
+            ${total.toFixed(2)}
+          </span>
         </h3>
       </div>
-
       <div className="income-expense">
         <div className="incomes">
           <h4>Incomes</h4>
-          <p className="text-primary">${income.toFixed(2)}</p>
+          <p
+            style={{
+              color: "#00ff41",
+              fontWeight: "bold",
+              textAlign: "center",
+            }}
+          >
+            ${income.toFixed(2)}
+          </p>
         </div>
         <div className="expenses">
           <h4>Expenses</h4>
-          <p className="text-danger">${expense.toFixed(2)}</p>
+          <p
+            style={{
+              color: "#f21b3f",
+              fontWeight: "bold",
+              textAlign: "center",
+            }}
+          >
+            ${expense.toFixed(2)}
+          </p>
         </div>
       </div>
     </div>

@@ -9,44 +9,25 @@ body {
   margin: 2em auto;
   padding: 1em;
   background-color: #415a77;
-  color: aliceblue;
-  width: 40%;
+  color: #f5fcfe;
+  width: 35%;
   border-radius: 3%;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
   margin: 0;
   padding-left: 0.5em;
-}
-h4 {
   text-align: center;
-}
-
-.form-control {
-  margin: 0;
-}
-
-.income-expense {
-  margin: 0;
-  padding: 1vh;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
 }
 
 .income-expense {
   margin: 0 auto;
-  background-color: #000;
-  width: 90%;
-}
-
-.remaining {
-  text-align: left !important;
-  color: #1b263b;
-}
-
-.text-primary, .text-danger {
-  font-weight: bolder;
+  padding: 1vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: #003554;
+  border-radius: 10px;
 }
 
 input {
