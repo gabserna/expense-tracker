@@ -82,4 +82,4 @@ I think doing this by my own was interesting, some days I was very strict with t
 # If you had the choice to start the project all over, what would you do differently?
 
 # Q: What could I have done better?
-- A: Maybe my code can be simplified, use less components or make it more attractive, I think that with practice I will be able to learn more
+- A: I started working in the style, I think I could leave that for the end, before I feel the pressure of dateline, I can code it a bit more simplified and more visual
